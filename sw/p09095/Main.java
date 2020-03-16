@@ -1,4 +1,4 @@
-package acmicpc.p09095;
+package p09095;
 
 import java.util.Scanner;
 

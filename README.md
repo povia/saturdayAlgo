@@ -16,3 +16,12 @@ RGB 거리
 1, 2, 3 더하기   
 >>>https://www.acmicpc.net/problem/2667   
 단지번호붙이기   
+   
+>2020-03-14~2020-03-20   
+>>DP, BFS/DFS   
+>>>https://www.acmicpc.net/problem/1463   
+1로 만들기   
+>>>https://www.acmicpc.net/problem/2468   
+안전 영역   
+>>>https://www.acmicpc.net/problem/7562   
+나이트의 이동   

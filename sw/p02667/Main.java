@@ -1,4 +1,4 @@
-package acmicpc.p02667;
+package p02667;
 
 import java.io.BufferedReader;
 import java.io.IOException;
