@@ -34,3 +34,16 @@ RGB 거리
 스타트링크   
 >>>https://www.acmicpc.net/problem/9466   
 텀 프로젝트   
+   
+>2020-03-28~2020-04-03   
+>>DP   
+>>>https://www.acmicpc.net/problem/11726   
+2xn 타일링   
+>>>https://www.acmicpc.net/problem/1912   
+연속합   
+>>>https://www.acmicpc.net/problem/2293   
+동전 1   
+>>>https://www.acmicpc.net/problem/1003   
+피보나치 함수   
+>>>https://www.acmicpc.net/problem/2193   
+이친수   
