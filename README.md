@@ -47,3 +47,16 @@ RGB 거리
 피보나치 함수   
 >>>https://www.acmicpc.net/problem/2193   
 이친수   
+   
+>2020-04-25~2020-05-01   
+>>재귀   
+공부 방법은   
+https://blog.encrypted.gg/731   
+여기서 확인   
+>>>https://www.acmicpc.net/problem/1074   
+Z   
+>>>https://www.acmicpc.net/problem/1629   
+곱셈   
+>>>https://www.acmicpc.net/problem/11729   
+하노이 탑 이동 순서   
+   
