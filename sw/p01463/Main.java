@@ -22,7 +22,7 @@ class BFS{
 		int result = 0;
 		Queue<Point> qu = new LinkedList<Point>();
 		qu.add(new Point(n, 0));
-		System.out.println("==================BPS=====================");
+		System.out.println("==================BFS=====================");
 		System.out.print(n+","+0);
 		while(!qu.isEmpty()){
 			System.out.print(" => ");

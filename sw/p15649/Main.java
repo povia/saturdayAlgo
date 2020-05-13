@@ -38,7 +38,6 @@ public class Main {
 			func(new int[M], new boolean[N], 0);
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
