@@ -4,51 +4,48 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
-
-	public static void main(String[] args) {
+public class Main{
+	public static void main(String[] args){
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-		int[] data = new int[10000];
-		int pos = 0;
 		int N;
-
+		int[] dataSet;
+		int cursor =0;
+		String space = "\n";
+		StringBuilder sb = new StringBuilder();
 		try {
-			N = Integer.parseInt(br.readLine().trim());
-			for (int i = 0; i < N; i++) {
-				String cmd = br.readLine().trim();
-				String[] set = cmd.split(" ");
-				cmd = set[0];
-
-				switch (cmd) {
-				case "push":
-					data[pos++] = Integer.parseInt(set[1].trim());
-					break;
-				case "top":
-					if(pos==0) System.out.println(-1);
-					else System.out.println(data[pos - 1]);
-					break;
-				case "size":
-					System.out.println(pos);
-					break;
-				case "empty":
-					System.out.println(pos == 0 ? 1 : 0);
-					break;
-				case "pop":
-					if (pos == 0) {
-						System.out.println(-1);
+			N = Integer.parseInt(br.readLine());
+			dataSet = new int[N];
+			
+			while(N-->0){
+				String[] line = br.readLine().split(" ");
+				
+				if(line[0].equals("push")){
+					dataSet[cursor++] = Integer.parseInt(line[1]);
+				}else if(line[0].equals("top")){
+					if(cursor>0){
+						sb.append(dataSet[cursor-1]).append(space);
 					} else {
-						// pos∏∏ ≥∑√Á¡‡µµ µ 
-						System.out.println(data[pos - 1]);
-						data[--pos] = 0;
+						sb.append(-1).append(space);
 					}
-					break;
+				}else if(line[0].equals("size")){
+					sb.append(cursor).append(space);
+				}else if(line[0].equals("empty")){
+					if(cursor<=0){
+						sb.append(1).append(space);
+					}else{
+						sb.append(0).append(space);
+					}
+				}else if(line[0].equals("pop")){
+					if(cursor>0){
+						sb.append(dataSet[--cursor]).append(space);
+					}else {
+						sb.append(-1).append(space);
+					}
 				}
 			}
-
-		} catch (NumberFormatException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println(sb.toString());
+		} catch (IOException e) {
+			System.out.println("Error Occured");
 		}
 	}
 }

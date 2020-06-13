@@ -4,49 +4,50 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
-	public static void main(String[] args) {
+public class Main{
+	public static void main(String[] args){
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int[] data = new int[10000];
-		int head=0, tail = 0;
+		
+		int N;
+		int head=0, tail=0;
+		int[] dataSet;
+		StringBuilder sb = new StringBuilder();
+		String space = "\n";
 		try {
-			int N = Integer.parseInt(br.readLine().trim());
-			for(int i=0; i<N; i++) {
-				String cmd = br.readLine().trim();
-				String[] set = cmd.split(" ");
-				cmd = set[0];
+			N = Integer.parseInt(br.readLine());
+			dataSet = new int[N];
+			while(N-->0){
+				String[] line = br.readLine().split(" ");
 				
-				switch(cmd) {
-				case "push":
-					data[tail++] = Integer.parseInt(set[1]);
-					break;
-				case "pop":
-					if(head==tail) {
-						System.out.println(-1);
-					} else {
-						System.out.println(data[head]);
-						head++;
+				if(line[0].equals("push")){
+					dataSet[tail++] = Integer.parseInt(line[1]);
+				}else if(line[0].equals("pop")){
+					if(head==tail){
+						sb.append(-1).append(space);
+					}else {
+						sb.append(dataSet[head++]).append(space);
 					}
-					break;
-				case "size":
-					System.out.println(tail-head);
-					break;
-				case "empty":
-					System.out.println(tail-head==0?1:0);
-					break;
-				case "front":
-					System.out.println(tail-head==0?-1:data[head]);
-					break;
-				case "back":
-					System.out.println(tail-head==0?-1:data[tail-1]);
-					break;
+				}else if(line[0].equals("size")){
+					sb.append(tail-head).append(space);
+				}else if(line[0].equals("empty")){
+					sb.append(tail-head==0?1:0).append(space);
+				}else if(line[0].equals("front")){
+					if(tail-head<=0){
+						sb.append(-1).append(space);
+					}else {
+						sb.append(dataSet[head]).append(space);
+					}
+				}else if(line[0].equals("back")){
+					if(tail-head<=0){
+						sb.append(-1).append(space);
+					}else {
+						sb.append(dataSet[tail-1]).append(space);
+					}
 				}
-				
 			}
-		} catch (NumberFormatException | IOException e) {
-			// TODO Auto-generated catch block
+			System.out.println(sb.toString());
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 	}
 }
